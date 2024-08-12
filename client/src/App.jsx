@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import FlashcardsPage from './pages/FlashcardsPage';
 import AdminPage from './pages/AdminPage';
 import Login from './components/Login';
-import jwtDecode from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

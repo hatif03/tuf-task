@@ -10,7 +10,7 @@ const Login = ({ setAuth }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('/api/auth/login', { username, password });
+      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, { username, password });
       localStorage.setItem('token', data.token);
       setAuth(true);
       navigate('/flashcards');

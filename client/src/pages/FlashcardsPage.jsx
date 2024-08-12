@@ -8,7 +8,7 @@ const FlashcardsPage = () => {
   useEffect(() => {
     const fetchFlashcards = async () => {
       try {
-        const { data } = await axios.get('/api/flashcards', {
+        const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/flashcards`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -24,7 +24,7 @@ const FlashcardsPage = () => {
 
   const deleteFlashcard = async (id) => {
     try {
-      await axios.delete(`/api/flashcards/${id}`, {
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/flashcards/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

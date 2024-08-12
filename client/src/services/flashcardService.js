@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = '/api/flashcards';
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/flashcards`;
 
 // Get all flashcards
 const getFlashcards = async () => {
